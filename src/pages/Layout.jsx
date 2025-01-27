@@ -4,7 +4,7 @@ export function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <header className="bg-blue-800 text-white py-4 shadow-md">
+      <header className="bg-gray-800 text-white py-4 shadow-md">
         <div className="container mx-auto flex justify-between items-center px-4">
           <h1 className="text-2xl font-bold">Movie App</h1>
           <nav>

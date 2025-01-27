@@ -1,11 +1,13 @@
 const BASE_URL = "http://localhost:3000/";
-import { useNavigate } from "react-router-dom";
-
-export function Card({ id, title, director, genre, release_year, image }) {
-  const navigate = useNavigate();
-  const goToDetails = () => {
-    navigate(`/movies/${id}`);
-  };
+export function Card({
+	id,
+	slug,
+	title,
+	director,
+	genre,
+	release_year,
+	image,
+  }) {
 
   return (
     <div
@@ -28,12 +30,7 @@ export function Card({ id, title, director, genre, release_year, image }) {
       <p className="text-gray-600 mt-1">
         <span className="font-medium">Release Year:</span> {release_year}
       </p>
-      <button
-        onClick={goToDetails}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 mt-2 rounded"
-      >
-        Detail
-      </button>
+	  <Link to={`/movies/${slug}`}>Dettagli</Link>
     </div>
   );
 }
